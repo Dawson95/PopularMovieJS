@@ -6,8 +6,9 @@ function fetchMovie(apiKey = '3f951fde1f94ff23e3aebbd24b292474') {
     ge=fr-FR&page=1`)
         .then(response => response.json())
         .then(movies => {
-            console.log(movies);
+            
             movies.results.forEach(movie => {
+                console.log(movie)
                 const cadre = document.createElement('div')
                 cadre.setAttribute('class','test')
                 resultSearch.appendChild(cadre)
